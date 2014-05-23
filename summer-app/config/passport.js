@@ -7,7 +7,6 @@ var LocalStrategy		= require('passport-local').Strategy;
 
 var User 				= require('../model/user');
 
-var configAuth			= require('./auth');
 
 // expose this function to our app using module.exports
 
@@ -117,3 +116,4 @@ module.exports = function(passport) {
 			return done(null, user);
 		});
 	}));
+};

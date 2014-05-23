@@ -4,7 +4,7 @@
 var mongoose = require('mongoose');
 
 //Build the connection string
-var dbURI = "mongodb://localhost/ConnectionTest";
+var dbURI = "mongodb://localhost/summer-app";
 
 module.exports = {
 	url : dbURI,
@@ -34,4 +34,4 @@ process.on('SIGINT', function() {
 });
 
 //LOAD SCHEMAS & MODELS
-require('../app/model/team'); // require once so the Team model will be rendered, will then be used in Routes
+
