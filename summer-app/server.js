@@ -13,11 +13,13 @@ var passport = require('passport');
 var db = require('./config/db'); //Database configuration
 var app = express();
 
+var soundclouder = require("soundclouder"); // soundclouder module that is connected to soundcloud
+
 
 // Configuration =============================================================
 db.mongoose.connect(db.url); //Connect to database
 require('./config/passport')(passport); // pass our passport object for configuration before using it!
-
+require('./config/soundclouder')(soundclouder);
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -50,7 +52,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-require('./routes/index.js')(app, passport); // load or routes and passes app and configured passport
+require('./routes/index.js')(app, passport, soundclouder); // load or routes and passes app and configured passport
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
