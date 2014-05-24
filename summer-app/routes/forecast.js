@@ -19,7 +19,7 @@ var forecast = new Forecast({
 
 module.exports = function(app, passport, isLoggedIn){
 
-app.get('/api/weather', isLoggedIn, function(req, res) {
+app.get('/api/getWeather', isLoggedIn, function(req, res) {
   // Retrieve weather information from coordinates (Sydney, Australia)
   forecast.get([58.58, 16.17], function(err, weather) {
     if(err) console.dir(err);

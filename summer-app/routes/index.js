@@ -1,4 +1,4 @@
-var Forecast = require('forecast');
+
 /*
 * GET home page.
 */
