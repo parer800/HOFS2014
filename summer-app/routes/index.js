@@ -2,7 +2,7 @@
 /*
 * GET home page.
 */
-module.exports = function(app,passport){
+module.exports = function(app, passport, soundclouder){
 
 
 
@@ -27,10 +27,16 @@ module.exports = function(app,passport){
   require('./auth')(app, passport);
 
   // api route =====================================
-  require('./api')(app, passport, isLoggedIn);
+  //require('./api')(app, passport, isLoggedIn);
+
+  // api route =====================================
+  require('./soundclouder')(app, soundclouder, isLoggedIn);
 
   // forecast route =================================
   require('./forecast')(app, passport, isLoggedIn);
+
+
+
 
 
 

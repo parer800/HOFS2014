@@ -1,6 +1,6 @@
 //routes/api.js
 
-module.exports = function(app, passport, isLoggedIn){
+module.exports = function(app, isLoggedIn){
 
 	//API STUFF
 
