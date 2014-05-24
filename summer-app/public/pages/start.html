@@ -36,6 +36,22 @@
   </div>
 </div>
 
+<script>
+var playSoundCloud = function(trackID){
+  SC.initialize({
+    client_id: '41a019542ba762188a8221087325962d'
+  });
+
+  console.log("Playing!");
+
+  // stream track id 293
+  SC.stream("/tracks/trackID", function(sound){
+    sound.play();
+  });
+};
+
+</script>
+
 <div id="footer" class="myNav">
   <div class="container">
     <div class="row nowPlaying">
@@ -47,8 +63,13 @@
     </div>
     <div class="col-md-4">
       <button class="btn btn-success"> <i class="fa fa-step-backward"></i></button>
-      <button class="btn btn-success"> <i class="fa fa-play"></i></button>
+      <button class="btn btn-success" onClick="playSoundCloud(293)"> <i class="fa fa-play"></i></button>
       <button class="btn btn-success"> <i class="fa fa-step-forward"></i></button>
+
+
+
+
+
     </div>
   </div>
   </div>

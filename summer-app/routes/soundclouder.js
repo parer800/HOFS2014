@@ -21,8 +21,8 @@ module.exports = function(app, soundclouder, isLoggedIn){
 	app.get('/api/soundcloud/:tags', isLoggedIn, function(req,res) {
  		var tagUrlPath = '&tags='+ req.param("tags");
 		soundcloudRequestByUrl(res, "/tracks.json?client_id=" + cliendID + tagUrlPath);
-		
-	  	
+
+
   	});
 
   	app.get('/api/getSound4CastPlayList', isLoggedIn, function (req, res) {
@@ -33,7 +33,7 @@ module.exports = function(app, soundclouder, isLoggedIn){
 
 		});
 		res.send({"hej" : "du"});
-  		
+
   	});
 
 }
@@ -80,4 +80,3 @@ function soundcloudRequestByUrl (res, path, callback) {
 
 		  request.end();
 }
-
