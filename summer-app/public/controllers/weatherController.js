@@ -1,25 +1,14 @@
+angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($scope, $http){
 
-var app = angular.module( 'summerApp.controllers', [] );
-
-app.controller( 'WeatherCtrl', function ($scope, $http) {
+  $scope.hej = "tjena";
 
   $http.get('/api/getWeather')
   .success(function(data) {
     $scope.CurrentWeather = data;
+    console.log(data);
 
   })
   .error(function(data) {
     console.log('Error: ' + data);
   });
-
-
-  /*
-  $scope.CurrentWeather = {
-  forecast: {
-  icon: "partly-cloudy-night",
-
-}
-};
-*/
-
-} );
+});
