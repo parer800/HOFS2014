@@ -22,7 +22,10 @@ module.exports = function(app,passport){
   // Authentication route ===========================
   require('./auth')(app, passport);
 
-  // Authentication route ===========================
+  // api route =====================================
+  require('./api')(app, passport, isLoggedIn);
+
+  // forecast route =================================
   require('./forecast')(app, passport, isLoggedIn);
 
 
