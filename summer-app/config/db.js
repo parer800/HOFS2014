@@ -1,10 +1,21 @@
-// Will hold the database connection and event listeners
+
+/*** Databas settings 
+	Username :  bertosvanner
+	password :  berto123
+
+	Settings för DB 
+	Username: soundforecast
+	pw 		: berto123
+**/
+
 
 // Bring Mongoose into the app
 var mongoose = require('mongoose');
 
 //Build the connection string
-var dbURI = "mongodb://localhost/summer-app";
+var dbURI = "mongodb://soundforecast:berto123@ds051838.mongolab.com:51838/soundforecast"
+
+//"mongodb://localhost/summer-app";
 
 module.exports = {
 	url : dbURI,
