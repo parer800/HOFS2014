@@ -19,6 +19,10 @@ module.exports = function(app,passport){
     res.render('index.hjs');
   });
 
+  app.get('/loggedinUser', isLoggedIn, function(req, res){
+    res.json({user: req.user});
+  })
+
   // Authentication route ===========================
   require('./auth')(app, passport);
 

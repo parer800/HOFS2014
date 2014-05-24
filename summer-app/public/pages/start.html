@@ -1,30 +1,35 @@
 
-
-
 <div ng-controller="WeatherCtrl" class="jumbotron" id="weatherDiv">
   <p class="bigWeather"> Current weather: </p>
   <p class="bigWeather"> {{CurrentWeather.currently.summary}} </p>
+  <canvas id="icon1" width="150" height="150"></canvas>
   <p id="bigTemp" class="bigWeather"> {{CurrentWeather.currently.apparentTemperature | number : 0}}&#176;C </p>
   <script>
-  var skycons = new Skycons({"color": "BLACK"});
+  var skycons = new Skycons({"color": "White"});
   skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
   skycons.play();
   </script>
-  <canvas id="icon1" width="150" height="150"></canvas>
-
 </div>
 
-<div id="additionalWeather">
-
-</div>
-
-
-<div id="playList">
-
-</div>
-
-<div id="rightPanel">
-
+<div class="row">
+  <div id="additionalWeather" class="col-md-3">
+    <h3>Weather information</h3>
+  </div>
+  <div id="playList" class="col-md-4">
+    <h3>Playlist</h3>
+    <table class="table">
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+    </table>
+  </div>
+  <div id="rightPanel" class="col-md-3">
+    <h3>RightPanel</h3>
+  </div>
 </div>
 
 <div id="footer">
@@ -46,4 +51,10 @@
 </div>
 
 
-<p style="margin-top:200px"> Hi! </p>
+
+<!--<div ng-controller="SpotifyDataCtrl">
+	<h1> Bersa leker... </h1>
+
+	<input type="text" ng-model="testing" ng-change="search(testing)"> </input> {{testing}}
+
+</div>-->
