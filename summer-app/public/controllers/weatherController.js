@@ -8,8 +8,6 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
     $scope.CurrentWeather = data;
     weatherData.setProperty($scope.CurrentWeather);
 
-
-
   })
   .error(function(data) {
     console.log('Error: ' + data);
