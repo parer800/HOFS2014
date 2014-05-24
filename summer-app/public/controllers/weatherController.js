@@ -26,7 +26,7 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
     }
     else{ // let the weather decide
 
-      keyWords['spotify'] = data.currently.summary;
+      keyWords['spotify'] = theSpotifyKeyWord;
       keyWords['soundcloud'] = data.currently.summary +',moisture';
       weatherData.setProperty(keyWords);//sends the summary for the weather to the service.
     }
