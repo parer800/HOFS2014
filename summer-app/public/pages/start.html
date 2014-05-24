@@ -1,70 +1,48 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
 
-  <title>myBulletin</title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="bower_components/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/public/stylesheets/style.css"> <!-- custom styles -->
-  <link rel='stylesheet' href='/bower_components/font-awesome/css/font-awesome.css' />
-  <link rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css' />
-  <link rel='stylesheet' href='../../bower_components/font-awesome/css/font-awesome.css' />
-  <link rel='stylesheet' href='../../bower_components/bootstrap/dist/css/bootstrap.css' />
-
-  <!-- JS -->
-  <script src="libs/angular/angular.min.js"></script>
-  <script src="libs/angular-route/angular-route.min.js"></script>
-  <script src="libs/flow.js/flow.js"></script>
-  <script src="libs/ng-flow-2.4.0/dist/ng-flow.min.js"></script>
-  <script src="libs/angularUI/ui-bootstrap-tpls-0.10.0.min.js"></script>
-
-
-  <!-- ANGULAR CUSTOM -->
-
-
-
-
-</head>
-<body ng-app="summerApp">
-<div class="container">
-  <!-- The static navbar, same in all the views! -->
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="myNav" ng-controller="HomeController">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-        </button>
-        <a class="navbar-brand" href="/home">myBulletin</a>
-      </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><p class="nav navbar-text">Logged in as:</p></li>
-          <li class="dropdown">
-            <a style="cursor:pointer;" class="dropdown-toggle" data-toggle="dropdown"> <span class="glyphicon glyphicon-user"></span> {{user}} <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><a href="/home"><span class="glyphicon glyphicon-list-alt"></span> Your BulletinBoards</a></li>
-              <li><a href="/profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-              <li><a href="/settings"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
-              <li class="divider"></li>
-              <li><a style="cursor:pointer;" ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-
-  <!-- ANGULAR DYNAMIC CONTENT -->
-  <div ng-view></div>
-
+<div ng-controller="WeatherCtrl" class="jumbotron" id="weatherDiv">
+  <p class="bigWeather"> Current weather: </p>
+  <p class="bigWeather"> {{CurrentWeather.currently.summary}} </p>
+  <canvas id="icon1" width="150" height="150"></canvas>
+  <p id="bigTemp" class="bigWeather"> {{CurrentWeather.currently.apparentTemperature | number : 0}}&#176;C </p>
+  <script>
+  var skycons = new Skycons({"color": "White"});
+  skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
+  skycons.play();
+  </script>
 </div>
-</body>
-</html>
+
+<div class="row" id="middleContainer">
+  <div id="playList" class="col-md-6">
+    <h3>Playlist</h3>
+    <table class="table">
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
+    </table>
+  </div>
+  <div id="additionalWeather" class="col-md-4">
+    <h3>Weather information</h3>
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="row nowPlaying">
+    <div class="col-md-4">
+      <p class="text-muted">Now Playing: </p>
+    </div>
+    <div class="col-md-4">
+      <p class="text-muted">Awesome songname</p>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-success"> <i class="fa fa-step-backward"></i></button>
+      <button class="btn btn-success"> <i class="fa fa-play"></i></button>
+      <button class="btn btn-success"> <i class="fa fa-step-forward"></i></button>
+    </div>
+  </div>
+  </div>
+</div>

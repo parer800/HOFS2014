@@ -3,8 +3,10 @@ angular.module('appRoutes', []).config(['$sceDelegateProvider', '$routeProvider'
 	$routeProvider
 		// home page
 		.when('/start', {
-			templateUrl: '/pages/start.html',
+			templateUrl: 'pages/start.html',
+		})
+		.when('/hej', {
+			templateUrl: 'pages/start.html',
 		});
-
-
+		$locationProvider.html5Mode(true);
 }]);

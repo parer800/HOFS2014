@@ -1,4 +1,4 @@
-var Forecast = require('forecast');
+
 /*
 * GET home page.
 */
@@ -9,15 +9,19 @@ module.exports = function(app, passport, soundclouder){
   app.get('/', function(req,res) {
     console.log(req.isAuthenticated());
     if(req.isAuthenticated())
-    res.redirect('/home');
+    res.redirect('/start');
     else
     res.render('login');
 
   });
 
-  app.get('/home', isLoggedIn, function(req,res) {
+  app.get('/start', isLoggedIn, function(req,res) {
     res.render('index.hjs');
   });
+
+  app.get('/loggedinUser', isLoggedIn, function(req, res){
+    res.json({user: req.user});
+  })
 
   // Authentication route ===========================
   require('./auth')(app, passport);
