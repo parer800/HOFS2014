@@ -30,16 +30,11 @@ module.exports = function(app, passport, soundclouder){
   //require('./api')(app, passport, isLoggedIn);
 
   // api route =====================================
+
   require('./soundclouder')(app, soundclouder, isLoggedIn);
 
   // forecast route =================================
   require('./forecast')(app, passport, isLoggedIn);
-
-
-
-
-
-
 };
 
 // Middleware to make sure the user is logged in

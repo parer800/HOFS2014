@@ -19,10 +19,11 @@ module.exports = function(app, soundclouder, isLoggedIn){
 		multiple tags: tag1,tag2,tag3 (...)
 	*/
 	app.get('/api/soundcloud/:tags', isLoggedIn, function(req,res) {
- 		var tagUrlPath = '&tags='+ req.param("tags");
+ 		var tagUrlPath = '&tags='+ encodeURI(req.param("tags"));
+ 		console.log(tagUrlPath);
 		soundcloudRequestByUrl(res, "/tracks.json?client_id=" + cliendID + tagUrlPath);
-		
-	  	
+
+
   	});
 
   	app.get('/api/getSound4CastPlayList', isLoggedIn, function (req, res) {
@@ -33,7 +34,7 @@ module.exports = function(app, soundclouder, isLoggedIn){
 
 		});
 		res.send({"hej" : "du"});
-  		
+
   	});
 
 }
@@ -80,4 +81,3 @@ function soundcloudRequestByUrl (res, path, callback) {
 
 		  request.end();
 }
-

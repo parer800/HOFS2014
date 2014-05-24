@@ -5,7 +5,7 @@ summerApp.factory('soundcloudDataService', function ($http, weatherData){
 		getPlaylist: function() {
 			
 			console.log(weatherData.getProperty().soundcloud);
-			var promise = $http.get('/api/soundcloud/summer')
+			var promise = $http.get('/api/soundcloud/'+weatherData.getProperty().soundcloud)
 				.success(function (result) {
 					console.log(result)
 					

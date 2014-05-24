@@ -16,6 +16,7 @@
     <script src="/bower_components/angular-route/angular-route.min.js"></script>
     <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="/bower_components/angular-ui/build/angular-ui.min.js"></script>
+    <script src="http://connect.soundcloud.com/sdk.js"></script>
 
     <!--Skycons-->
     <script src="/bower_components/skycons/skycons.js"></script>
