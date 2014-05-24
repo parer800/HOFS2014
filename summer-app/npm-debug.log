@@ -1,0 +1,130 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.2.18
+3 info using node@v0.10.4
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose read json D:\kurser\HOFS2014\summer-app\package.json
+6 warn package.json application-name@0.0.1 No README.md file found!
+7 verbose readDependencies using package.json deps
+8 verbose install where, deps [ 'D:\\kurser\\HOFS2014\\summer-app',
+8 verbose install   [ 'express',
+8 verbose install     'forecast',
+8 verbose install     'mongoose',
+8 verbose install     'hogan-express',
+8 verbose install     'soundclouder',
+8 verbose install     'passport',
+8 verbose install     'bcrypt-nodejs',
+8 verbose install     'passport-local',
+8 verbose install     'hjs',
+8 verbose install     'soundcloud-node' ] ]
+9 verbose from cache D:\kurser\HOFS2014\summer-app\package.json
+10 info preinstall application-name@0.0.1
+11 verbose read json D:\kurser\HOFS2014\summer-app\node_modules\bcrypt-nodejs\package.json
+12 verbose read json D:\kurser\HOFS2014\summer-app\node_modules\express\package.json
+13 verbose read json D:\kurser\HOFS2014\summer-app\node_modules\forecast\package.json
+14 verbose read json D:\kurser\HOFS2014\summer-app\node_modules\hjs\package.json
+15 verbose read json D:\kurser\HOFS2014\summer-app\node_modules\hogan-express\package.json
+16 verbose read json D:\kurser\HOFS2014\summer-app\node_modules\jade\package.json
+17 verbose read json D:\kurser\HOFS2014\summer-app\node_modules\mongoose\package.json
+18 verbose read json D:\kurser\HOFS2014\summer-app\node_modules\passport\package.json
+19 verbose read json D:\kurser\HOFS2014\summer-app\node_modules\passport-local\package.json
+20 verbose read json D:\kurser\HOFS2014\summer-app\node_modules\soundcloud-node\package.json
+21 verbose read json D:\kurser\HOFS2014\summer-app\node_modules\soundclouder\package.json
+22 verbose from cache D:\kurser\HOFS2014\summer-app\package.json
+23 verbose readDependencies using package.json deps
+24 verbose from cache D:\kurser\HOFS2014\summer-app\node_modules\bcrypt-nodejs\package.json
+25 verbose from cache D:\kurser\HOFS2014\summer-app\node_modules\express\package.json
+26 verbose from cache D:\kurser\HOFS2014\summer-app\node_modules\forecast\package.json
+27 verbose from cache D:\kurser\HOFS2014\summer-app\node_modules\hjs\package.json
+28 verbose from cache D:\kurser\HOFS2014\summer-app\node_modules\hogan-express\package.json
+29 verbose from cache D:\kurser\HOFS2014\summer-app\node_modules\jade\package.json
+30 verbose from cache D:\kurser\HOFS2014\summer-app\node_modules\mongoose\package.json
+31 verbose from cache D:\kurser\HOFS2014\summer-app\node_modules\passport\package.json
+32 verbose from cache D:\kurser\HOFS2014\summer-app\node_modules\passport-local\package.json
+33 verbose from cache D:\kurser\HOFS2014\summer-app\node_modules\soundcloud-node\package.json
+34 verbose from cache D:\kurser\HOFS2014\summer-app\node_modules\soundclouder\package.json
+35 verbose already installed skipping express@3.5.1 D:\kurser\HOFS2014\summer-app
+36 verbose cache add [ 'forecast@^0.1.1', null ]
+37 verbose cache add name=undefined spec="forecast@^0.1.1" args=["forecast@^0.1.1",null]
+38 verbose parsed url { protocol: null,
+38 verbose parsed url   slashes: null,
+38 verbose parsed url   auth: null,
+38 verbose parsed url   host: null,
+38 verbose parsed url   port: null,
+38 verbose parsed url   hostname: null,
+38 verbose parsed url   hash: null,
+38 verbose parsed url   search: null,
+38 verbose parsed url   query: null,
+38 verbose parsed url   pathname: 'forecast@^0.1.1',
+38 verbose parsed url   path: 'forecast@^0.1.1',
+38 verbose parsed url   href: 'forecast@^0.1.1' }
+39 verbose cache add name="forecast" spec="^0.1.1" args=["forecast","^0.1.1"]
+40 verbose parsed url { protocol: null,
+40 verbose parsed url   slashes: null,
+40 verbose parsed url   auth: null,
+40 verbose parsed url   host: null,
+40 verbose parsed url   port: null,
+40 verbose parsed url   hostname: null,
+40 verbose parsed url   hash: null,
+40 verbose parsed url   search: null,
+40 verbose parsed url   query: null,
+40 verbose parsed url   pathname: '^0.1.1',
+40 verbose parsed url   path: '^0.1.1',
+40 verbose parsed url   href: '^0.1.1' }
+41 verbose addNamed [ 'forecast', '^0.1.1' ]
+42 verbose addNamed [ null, null ]
+43 verbose already installed skipping mongoose@~3.8.11 D:\kurser\HOFS2014\summer-app
+44 verbose already installed skipping hogan-express@* D:\kurser\HOFS2014\summer-app
+45 verbose already installed skipping soundclouder@~0.7.10 D:\kurser\HOFS2014\summer-app
+46 silly lockFile 7d1e8efc-forecast-0-1-1 forecast@^0.1.1
+47 verbose lock forecast@^0.1.1 C:\Users\paeri_000\AppData\Roaming\npm-cache\7d1e8efc-forecast-0-1-1.lock
+48 info addNameTag [ 'forecast', '^0.1.1' ]
+49 verbose already installed skipping passport@~0.2.0 D:\kurser\HOFS2014\summer-app
+50 verbose already installed skipping bcrypt-nodejs@0.0.3 D:\kurser\HOFS2014\summer-app
+51 verbose already installed skipping passport-local@~1.0.0 D:\kurser\HOFS2014\summer-app
+52 verbose already installed skipping hjs@0.0.6 D:\kurser\HOFS2014\summer-app
+53 verbose already installed skipping soundcloud-node@0.0.8 D:\kurser\HOFS2014\summer-app
+54 verbose url raw forecast
+55 verbose url resolving [ 'https://registry.npmjs.org/', './forecast' ]
+56 verbose url resolved https://registry.npmjs.org/forecast
+57 info trying registry request attempt 1 at 14:59:20
+58 verbose etag "B40HA2AUVG3YDSW9JS9P1M8LG"
+59 http GET https://registry.npmjs.org/forecast
+60 http 304 https://registry.npmjs.org/forecast
+61 silly registry.get cb [ 304,
+61 silly registry.get   { date: 'Sat, 24 May 2014 12:59:21 GMT',
+61 silly registry.get     server: 'Apache',
+61 silly registry.get     via: '1.1 varnish',
+61 silly registry.get     'last-modified': 'Sat, 24 May 2014 12:59:22 GMT',
+61 silly registry.get     'cache-control': 'max-age=1',
+61 silly registry.get     etag: '"B40HA2AUVG3YDSW9JS9P1M8LG"',
+61 silly registry.get     'x-served-by': 'cache-fra1235-FRA',
+61 silly registry.get     'x-cache': 'MISS',
+61 silly registry.get     'x-cache-hits': '0',
+61 silly registry.get     'x-timer': 'S1400936361.936127,VS0,VE270',
+61 silly registry.get     vary: 'Accept',
+61 silly registry.get     'content-length': '0',
+61 silly registry.get     'keep-alive': 'timeout=10, max=50',
+61 silly registry.get     connection: 'Keep-Alive' } ]
+62 verbose etag forecast from cache
+63 silly lockFile 7d1e8efc-forecast-0-1-1 forecast@^0.1.1
+64 silly lockFile 7d1e8efc-forecast-0-1-1 forecast@^0.1.1
+65 error Error: No compatible version found: forecast@'^0.1.1'
+65 error Valid install targets:
+65 error ["0.0.1","0.1.0","0.1.1"]
+65 error     at installTargetsError (C:\Program Files\nodejs\node_modules\npm\lib\cache.js:685:10)
+65 error     at C:\Program Files\nodejs\node_modules\npm\lib\cache.js:607:10
+65 error     at saved (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\get.js:138:7)
+65 error     at Object.oncomplete (fs.js:107:15)
+66 error If you need help, you may report this log at:
+66 error     <http://github.com/isaacs/npm/issues>
+66 error or email it to:
+66 error     <npm-@googlegroups.com>
+67 error System Windows_NT 6.2.9200
+68 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+69 error cwd D:\kurser\HOFS2014\summer-app
+70 error node -v v0.10.4
+71 error npm -v 1.2.18
+72 verbose exit [ 1, true ]
