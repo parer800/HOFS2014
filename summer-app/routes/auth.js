@@ -1,6 +1,6 @@
 // Authentication routing
 
-module.exports = function(app, passport){
+module.exports = function(app, passport, isLoggedIn){
 	
 	//===================================
 	// SIGNUP FORM =======================
