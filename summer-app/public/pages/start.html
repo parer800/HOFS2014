@@ -1,22 +1,44 @@
 
 
 
-<div class="jumbotron" id="weatherDiv">
+<div class="jumbotron" id="weatherDiv" ng-controller="WeatherCtrl">
   <p class="bigWeather"> Current weather: </p>
-  <p class="bigWeather"> Clear </p>
-  <p id="bigTemp" class="bigWeather"> 22&#176;C </p>
+  <div>
+
+    <script>
+    var skycons = new Skycons({"color": "WHITE"});
+    skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
+    skycons.play();
+    </script>
+    <canvas id="icon1" width="150" height="150" class="bigWeather"></canvas>
+    <p id="bigTemp"> 22&#176;C </p>
+
+    <!--<skycon icon="CurrentWeather.forecast.icon" color="blue" size="100"></skycon>-->
+  </div>
 </div>
 
-<div id="additionalWeather">
+<div class="row">
+  <div id="additionalWeather" class="col-md-3">
+    <h3>Weather information</h3>
+  </div>
 
-</div>
 
+  <div id="playList" class="col-md-4">
+    <h3>Playlist</h3>
+    <table class="table">
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"</td></tr>
+    </table>
+  </div>
 
-<div id="playList">
-
-</div>
-
-<div id="rightPanel">
+  <div id="rightPanel" class="col-md-3">
+    <h3>RightPanel</h3>
+  </div>
 
 </div>
 
@@ -38,15 +60,5 @@
   </div>
 </div>
 
-<div ng-controller="WeatherCtrl">
 
-  <script>
-  var skycons = new Skycons({"color": "BLACK"});
-  skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
-  skycons.play();
-  </script>
-  <canvas id="icon1" width="200" height="200"></canvas>
-
-  <!--<skycon icon="CurrentWeather.forecast.icon" color="blue" size="100"></skycon>-->
-</div>
 <p style="margin-top:200px"> Hi! </p>
