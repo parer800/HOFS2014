@@ -26,7 +26,6 @@ a {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
-  background-color: #000;
   margin:0px;
 }
 
@@ -76,4 +75,17 @@ a {
 
 #middleContainer{
   margin-left: 50px;
+}
+
+.myNav{
+  background-color: rgba(248,248,248,0.9);
+  color: #000;
+}
+
+.myNav a{
+  color: #000;
+}
+
+.myNav p{
+  color: #000;
 }
