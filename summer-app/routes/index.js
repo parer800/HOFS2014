@@ -15,7 +15,7 @@ module.exports = function(app,passport){
 
   });
 
-  app.get('/home', isLoggedIn, function(req,res) {
+  app.get('/start', isLoggedIn, function(req,res) {
     res.render('index.hjs');
   });
 
