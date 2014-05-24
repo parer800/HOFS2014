@@ -1,4 +1,4 @@
-angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($scope, $http){
+angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($scope, $http,weatherData){
 
   $scope.hej = "tjena";
 
@@ -6,7 +6,7 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
   .success(function(data) {
     //$scope.CurrentWeather = data;
     $scope.CurrentWeather = data;
-
+    weatherData.setProperty($scope.CurrentWeather);
 
 
 
