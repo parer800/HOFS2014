@@ -3,10 +3,10 @@
 summerApp.controller('playlistController', function ($scope, $http, soundcloudDataService, spotifyDataService,weatherData){
 
 	console.log("try to init");
-	$scope.soundcloudList;
+	$scope.soundcloudList = [];
 	$scope.spotifyList;
 
-	
+
 
 	$scope.search = function(data){
 

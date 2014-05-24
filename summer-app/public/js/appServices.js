@@ -12,6 +12,13 @@ services.service('weatherData', function () {
             },
             setProperty: function(value) {
                 property = value;
+                console.log(property);
             }
         };
-    }); 
+    });
+
+/*
+var leagueFormService = {
+        sharedObject: {
+            exerciseSchedule : null
+        }*/

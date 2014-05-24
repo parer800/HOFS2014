@@ -12,22 +12,16 @@
 </div>
 
 
-<div class="row" id="middleContainer">
+<div class="row" id="middleContainer" ng-controller="playlistController">
   <div id="playList" class="col-md-6">
     <h3>Playlist</h3>
     <table class="table">
-      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
-      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
-      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
-      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
-      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
-      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
-      <tr><td>Song name</td><td>Artist</td><td><i class="fa fa-spotify"/></td></tr>
+      <tr ng-repeat="soundCloud in soundcloudList"><td>{{soundCloud.name}}</td><td>Artist</td><td><i class="fa fa-soundCloud"/></td></tr>
     </table>
   </div>
 
-
   <div id="rightPanel" ng-controller="playlistController" class="col-md-3">
+
     <h3>RightPanel</h3>
 		<input type="text" ng-model="testing" ng-change="search(testing)"> </input> {{testing}} </div>
 
@@ -36,6 +30,22 @@
 		<input type="text" ng-model="testing" ng-change="search(testing)"> </input> {{testing}} 
   </div>
 </div>
+
+<script>
+var playSoundCloud = function(trackID){
+  SC.initialize({
+    client_id: '41a019542ba762188a8221087325962d'
+  });
+
+  console.log("Playing!");
+
+  // stream track id 293
+  SC.stream("/tracks/trackID", function(sound){
+    sound.play();
+  });
+};
+
+</script>
 
 <div id="footer" class="myNav">
   <div class="container">
@@ -48,8 +58,13 @@
     </div>
     <div class="col-md-4">
       <button class="btn btn-success"> <i class="fa fa-step-backward"></i></button>
-      <button class="btn btn-success"> <i class="fa fa-play"></i></button>
+      <button class="btn btn-success" onClick="playSoundCloud(293)"> <i class="fa fa-play"></i></button>
       <button class="btn btn-success"> <i class="fa fa-step-forward"></i></button>
+
+
+
+
+
     </div>
   </div>
   </div>

@@ -1,4 +1,4 @@
-angular.module( 'spotifyDataController', [] ).controller('SpotifyDataCtrl', function ($scope, $http,weatherData){
+/*angular.module( 'spotifyDataController', [] ).controller('SpotifyDataCtrl', function ($scope, $http,weatherData){
 
 
 
@@ -42,14 +42,25 @@ angular.module( 'spotifyDataController', [] ).controller('SpotifyDataCtrl', func
         var j;
         for(j=0;j<3;j++){
 
+<<<<<<< HEAD
             result.push({"song":data1.album.tracks[j].name, "artist": data1.album.tracks[j].artists[0].name , "duration": data1.album.tracks[j].length});
         } 
         console.log("Result: ",result);
+=======
+  	 $http.get(searchdata)
+  		.success(function(data) {
+
+        
+  			// Plockar ut alla album
+    	$scope.spotifyData = data.albums;
+    	console.log(data.albums);
+>>>>>>> b851df5ab65672c67bba3a72fea381225f212889
 
       }).error(function(data) {
         console.log('Error: ' + data1);
       });
 
+<<<<<<< HEAD
     }  
 	})
   .error(function(data) {
@@ -57,6 +68,8 @@ angular.module( 'spotifyDataController', [] ).controller('SpotifyDataCtrl', func
   });
 
 
+=======
+>>>>>>> b851df5ab65672c67bba3a72fea381225f212889
   };
 
-});
+});*/
