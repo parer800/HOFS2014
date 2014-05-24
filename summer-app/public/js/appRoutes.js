@@ -9,5 +9,4 @@ angular.module('appRoutes', []).config(['$sceDelegateProvider', '$routeProvider'
 			templateUrl: 'pages/start.html',
 		});
 		$locationProvider.html5Mode(true);
-		console.log("Tjena");
 }]);

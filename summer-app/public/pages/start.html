@@ -1,6 +1,47 @@
-<div ng-controller="WeatherCtrl">
-  {{hej}}
+<div ng-controller="WeatherCtrl" class="jumbotron" id="weatherDiv">
+  <p class="bigWeather"> Current weather: </p>
+  <p class="bigWeather"> {{CurrentWeather.currently.summary}} </p>
+  <p id="bigTemp" class="bigWeather"> {{CurrentWeather.currently.apparentTemperature | number : 0}}&#176;C </p>
+  <script>
+  var skycons = new Skycons({"color": "BLACK"});
+  skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
+  skycons.play();
+  </script>
+  <canvas id="icon1" width="150" height="150"></canvas>
 </div>
+
+<div id="additionalWeather">
+
+</div>
+
+
+<div id="playList">
+
+</div>
+
+<div id="rightPanel">
+
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="row nowPlaying">
+    <div class="col-md-4">
+      <p class="text-muted">Now Playing: </p>
+    </div>
+    <div class="col-md-4">
+      <p class="text-muted">Awesome songname</p>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-success"> <i class="fa fa-step-backward"></i></button>
+      <button class="btn btn-success"> <i class="fa fa-play"></i></button>
+      <button class="btn btn-success"> <i class="fa fa-step-forward"></i></button>
+    </div>
+  </div>
+  </div>
+</div>
+
+
 <p style="margin-top:200px"> Hi! </p>
 
 
