@@ -2,6 +2,10 @@ angular.module( 'spotifyDataController', [] ).controller('SpotifyDataCtrl', func
 
   $scope.berta = "Simon prooovar lite...";
 
+  var temp = weatherData.getProperty();
+
+  console.log("tst service: ",temp);
+
   $scope.search = function(data){
 
   	var searchdata = 'http://ws.spotify.com/search/1/album.json?q=' + data; // Data = sökord
@@ -26,7 +30,7 @@ angular.module( 'spotifyDataController', [] ).controller('SpotifyDataCtrl', func
 	  {
 	  	var hej = 10;
 	  }
-	  else 
+	  else
 	  {
 	  	var hej = $scope.spotifyData.length
 	  }

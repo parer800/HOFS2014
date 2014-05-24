@@ -6,7 +6,9 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
   .success(function(data) {
     //$scope.CurrentWeather = data;
     $scope.CurrentWeather = data;
-    weatherData.setProperty($scope.CurrentWeather);
+    console.log(data);
+
+    weatherData.setProperty(data.currently.summary);//sends the summary for the weather to the service.
 
   })
   .error(function(data) {
