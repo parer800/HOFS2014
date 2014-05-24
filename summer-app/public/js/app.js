@@ -1,1 +1,1 @@
-angular.module('summerApp', ['ngRoute', 'appRoutes', 'weatherController']);
+angular.module('summerApp', ['ngRoute', 'appRoutes', 'weatherController','spotifyDataController']);

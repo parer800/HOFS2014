@@ -17,6 +17,7 @@
     <script src="/bower_components/angular-ui/build/angular-ui.min.js"></script>
 
     <!-- Angular Custom -->
+    <script src="controllers/spotifyDataController.js"></script>
     <script src="controllers/weatherController.js"></script>
     <script src="js/appRoutes.js"></script>
     <script src="js/appDirectives.js"></script>

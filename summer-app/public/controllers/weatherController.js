@@ -5,7 +5,6 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
   $http.get('/api/getWeather')
   .success(function(data) {
     $scope.CurrentWeather = data;
-    console.log(data);
 
   })
   .error(function(data) {
