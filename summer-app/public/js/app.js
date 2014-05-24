@@ -1,1 +1,1 @@
-angular.module('summerApp', ['ngRoute', 'flow', 'appRoutes', 'HomeCtrl', 'BulletinCtrl', 'SettingsCtrl','ProfileCtrl', 'drag']);
+angular.module('summerApp', ['ngRoute', 'appRoutes']);
