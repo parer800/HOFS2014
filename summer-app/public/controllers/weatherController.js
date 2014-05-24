@@ -6,7 +6,13 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
   .success(function(data) {
     //$scope.CurrentWeather = data;
     $scope.CurrentWeather = data;
-    console.log(data);
+    console.log(data.currently.icon);
+
+    $scope.CurrentW = {
+        forecast: {
+            icon: data.currently.icon
+        }
+    };
 
 
 
