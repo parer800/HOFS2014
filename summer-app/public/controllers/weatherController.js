@@ -8,7 +8,27 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
     $scope.CurrentWeather = data;
     console.log(data);
 
-    weatherData.setProperty(data.currently.summary);//sends the summary for the weather to the service.
+    var currentTime = new Date();
+    var keyWords = { 'spotify' : '', 'soundcloud' : '' };
+    console.log(currentTime.getHours());
+    if(currentTime.getHours()>20  && currentTime.getHours()<23 ){
+      keyWords['spotify'] = 'lounge';
+      keyWords['soundcloud'] = data.currently.summary +', lounge';
+      weatherData.setProperty(keyWords);//its Lounge time
+    }
+    else if(currentTime.getHours()>23){
+      keyWords['spotify'] = 'party';
+      keyWords['soundcloud'] = data.currently.summary +', party, kygo, night';
+      weatherData.setProperty(keyWords);// its party time
+
+    }
+    else{ // let the weather decide
+
+      keyWords['spotify'] = data.currently.summary;
+      keyWords['soundcloud'] = data.currently.summary +', moisture';
+      weatherData.setProperty(keyWords);//sends the summary for the weather to the service.
+    }
+
 
   })
   .error(function(data) {
