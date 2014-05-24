@@ -7,6 +7,7 @@ services.service('weatherData', function () {
 
         return {
             getProperty: function () {
+                console.log(property);
                 return property;
             },
             setProperty: function(value) {
