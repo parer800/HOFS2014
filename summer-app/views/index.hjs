@@ -23,6 +23,7 @@
 
 
     <!-- Angular Custom -->
+    <script src="controllers/spotifyDataController.js"></script>
     <script src="controllers/weatherController.js"></script>
     <script src="js/appRoutes.js"></script>
     <script src="js/appDirectives.js"></script>

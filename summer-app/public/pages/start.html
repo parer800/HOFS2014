@@ -1,9 +1,16 @@
 
-
-
-<div class="jumbotron" id="weatherDiv" ng-controller="WeatherCtrl">
+<div ng-controller="WeatherCtrl" class="jumbotron" id="weatherDiv">
   <p class="bigWeather"> Current weather: </p>
-  <div>
+  <p class="bigWeather"> {{CurrentWeather.currently.summary}} </p>
+  <p id="bigTemp" class="bigWeather"> {{CurrentWeather.currently.apparentTemperature | number : 0}}&#176;C </p>
+  <script>
+  var skycons = new Skycons({"color": "BLACK"});
+  skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
+  skycons.play();
+  </script>
+  <canvas id="icon1" width="150" height="150"></canvas>
+</div>
+
 
     <script>
     var skycons = new Skycons({"color": "WHITE"});
@@ -62,3 +69,11 @@
 
 
 <p style="margin-top:200px"> Hi! </p>
+
+
+<!--<div ng-controller="SpotifyDataCtrl">
+	<h1> Bersa leker... </h1>
+
+	<input type="text" ng-model="testing" ng-change="search(testing)"> </input> {{testing}}
+
+</div>-->
