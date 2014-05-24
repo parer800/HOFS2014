@@ -1,10 +1,7 @@
-/*
-var app = angular.module( 'myApp.controllers', [] );
+
+var app = angular.module( 'summerApp.controllers', [] );
 
 app.controller( 'WeatherCtrl', function ($scope, $http) {
-
-
-
 
   $http.get('/api/getWeather')
   .success(function(data) {
@@ -23,7 +20,6 @@ app.controller( 'WeatherCtrl', function ($scope, $http) {
 
 }
 };
-
+*/
 
 } );
-*/
