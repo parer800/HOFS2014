@@ -1,29 +1,20 @@
-/*
-var app = angular.module( 'myApp.controllers', [] );
+angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($scope, $http){
 
-app.controller( 'WeatherCtrl', function ($scope, $http) {
-
-
-
+  $scope.hej = "tjena";
 
   $http.get('/api/getWeather')
   .success(function(data) {
-    $scope.CurrentWeather = data;
+    //$scope.CurrentWeather = data;
+
 
   })
   .error(function(data) {
     console.log('Error: ' + data);
   });
 
-
-  /*
-  $scope.CurrentWeather = {
-  forecast: {
-  icon: "partly-cloudy-night",
-
-}
-};
+// you can add a canvas by it's ID...
 
 
-} );
-*/
+
+
+});

@@ -1,1 +1,1 @@
-angular.module('summerApp', ['ngRoute', 'appRoutes', 'angular-skycons']);
+angular.module('summerApp', ['ngRoute', 'appRoutes', 'weatherController', 'angular-skycons']);

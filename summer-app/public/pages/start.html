@@ -1,5 +1,6 @@
 
 
+
 <div class="jumbotron" id="weatherDiv">
   <p class="bigWeather"> Current weather: </p>
   <p class="bigWeather"> Clear </p>
@@ -36,3 +37,16 @@
   </div>
   </div>
 </div>
+
+<div ng-controller="WeatherCtrl">
+
+  <script>
+  var skycons = new Skycons({"color": "BLACK"});
+  skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
+  skycons.play();
+  </script>
+  <canvas id="icon1" width="200" height="200"></canvas>
+
+  <!--<skycon icon="CurrentWeather.forecast.icon" color="blue" size="100"></skycon>-->
+</div>
+<p style="margin-top:200px"> Hi! </p>
