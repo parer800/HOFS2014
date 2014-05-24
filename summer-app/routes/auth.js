@@ -23,6 +23,7 @@ module.exports = function(app, passport, isLoggedIn){
 
 		res.render('login',{title: 'Login', message: 'Login view'});
 	});
+	
 	app.post('/login', passport.authenticate('local-login', {
 		successRedirect : '/start', // redirect secured- logged in user to the home page of the single page application
 		failureRedirect : '/login' // rediret user back to login page

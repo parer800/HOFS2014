@@ -2,6 +2,8 @@ angular.module( 'spotifyDataController', [] ).controller('SpotifyDataCtrl', func
 
 
 
+
+
   $scope.search = function(data){
 
   var weather = weatherData.getProperty();  // Get key word to search for album with ...Get the key from weather
@@ -53,9 +55,6 @@ angular.module( 'spotifyDataController', [] ).controller('SpotifyDataCtrl', func
   .error(function(data) {
     console.log('Error: ' + data);
   });
-
-
-
 
 
   };
