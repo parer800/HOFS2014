@@ -34,10 +34,12 @@ summerApp.controller('playlistController', function ($scope, $http, soundcloudDa
 	  var result = []; // result to send back..
 	  var input = weatherData.getProperty();
 
+	  console.log("SIMON JARE: ",input)
+
 	  input = encodeURI(input.spotify);
 
-	  var searchdata = 'http://ws.spotify.com/search/1/album.json?q=' + 'humid'; // Data = sökord
-
+	  var searchdata = 'http://ws.spotify.com/search/1/album.json?q=' + '1'; // 1 = med nått annat...
+	  console.log("JARE::::",input)
 		$http.get(searchdata)
 			.success(function (data) {
 				// Plockar ut alla album
@@ -68,7 +70,6 @@ summerApp.controller('playlistController', function ($scope, $http, soundcloudDa
 
 			            result.push({"song":data1.album.tracks[j].name, "artist": data1.album.tracks[j].artists[0].name , "duration": data1.album.tracks[j].length});
 			        } 
-			        console.log("Result: ",result);
 			        $scope.spotifyList=result;
 
 

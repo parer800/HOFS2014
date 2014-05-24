@@ -9,7 +9,7 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
     console.log(data);
     var spotifyKeyword = data.currently.summary;
     var theSpotifyKeyWord = spotifyKeyword.substring(0, spotifyKeyword.indexOf(' '));
-
+    console.log(spotifyKeyword);
     var currentTime = new Date();
     var keyWords = { 'spotify' : '', 'soundcloud' : '' };
     console.log(currentTime.getHours());
@@ -26,7 +26,7 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
     }
     else{ // let the weather decide
 
-      keyWords['spotify'] = theSpotifyKeyWord;
+      keyWords['spotify'] = data.currently.summary;
       keyWords['soundcloud'] = data.currently.summary +',moisture';
       weatherData.setProperty(keyWords);//sends the summary for the weather to the service.
     }

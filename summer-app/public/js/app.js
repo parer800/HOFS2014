@@ -1,1 +1,1 @@
-var summerApp = angular.module('summerApp', ['ngRoute', 'appRoutes','appServices', 'weatherController','spotifyDataController','angular-skycons', 'homeController']);
+var summerApp = angular.module('summerApp', ['ngRoute', 'appRoutes','appServices', 'weatherController','angular-skycons', 'homeController']);
