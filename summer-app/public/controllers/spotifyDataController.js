@@ -14,6 +14,8 @@ angular.module( 'spotifyDataController', [] ).controller('SpotifyDataCtrl', func
 
   	 $http.get(searchdata)
   		.success(function(data) {
+
+        
   			// Plockar ut alla album
     	$scope.spotifyData = data.albums;
     	console.log(data.albums);
@@ -22,18 +24,6 @@ angular.module( 'spotifyDataController', [] ).controller('SpotifyDataCtrl', func
 	  .error(function(data) {
 	    console.log('Error: ' + data);
 	  });
-
-
-	  // Har vi tio album
-	 /* if($scope.spotifyData.length > 10)
-	  {
-	  	var hej = 10;
-	  }
-	  else
-	  {
-	  	var hej = $scope.spotifyData.length
-	  }
-*/
 
   };
 

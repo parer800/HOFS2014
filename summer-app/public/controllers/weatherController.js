@@ -7,6 +7,8 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
     //$scope.CurrentWeather = data;
     $scope.CurrentWeather = data;
     console.log(data);
+    var spotifyKeyword = data.currently.summary;
+    var theSpotifyKeyWord = spotifyKeyword.substring(0, spotifyKeyword.indexOf(' '));
 
     var currentTime = new Date();
     var keyWords = { 'spotify' : '', 'soundcloud' : '' };
@@ -24,7 +26,7 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
     }
     else{ // let the weather decide
 
-      keyWords['spotify'] = data.currently.summary;
+      keyWords['spotify'] = theSpotifyKeyWord;
       keyWords['soundcloud'] = data.currently.summary +', moisture';
       weatherData.setProperty(keyWords);//sends the summary for the weather to the service.
     }
