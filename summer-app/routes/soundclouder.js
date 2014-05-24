@@ -54,12 +54,30 @@ function soundcloudRequestByUrl (res, path, callback) {
 		    });
 		    response.on('end', function() {
 		    console.log(body.id);
-		      res.send(JSON.parse(body));
+		      var temp = JSON.parse(body);
+		      var map = {};
+		      var result_data = [];
+		      for(var track in temp) {
+		      	result_data.push({
+			      		id : temp[track].id,
+			      		duration : temp[track].duration,
+			      		tag_list : temp[track].tag_list,
+			      		streamable : temp[track].streamable,
+			      		name		: temp[track].title,
+			      		permalink_url	: temp[track].permalink_url,
+			      		artwork_url		: temp[track].permalink_url
+		      		}
+		      	)
+		      }
+		      map.soundcloud = result_data;
+		      res.send(map);
 		    });
 		  });
 		  request.on('error', function(e) {
 		    console.log('Problem with request: ' + e.message);
 		  });
+
+
 		  request.end();
 }
 
