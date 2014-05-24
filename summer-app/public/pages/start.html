@@ -1,10 +1,16 @@
 
 
 
-<div class="jumbotron" id="weatherDiv">
+<div ng-controller="WeatherCtrl" class="jumbotron" id="weatherDiv">
   <p class="bigWeather"> Current weather: </p>
-  <p class="bigWeather"> Clear </p>
-  <p id="bigTemp" class="bigWeather"> 22&#176;C </p>
+  <p class="bigWeather"> {{CurrentWeather.currently.summary}} </p>
+  <p id="bigTemp" class="bigWeather"> {{CurrentWeather.currently.apparentTemperature | number : 0}}&#176;C </p>
+  <script>
+  var skycons = new Skycons({"color": "BLACK"});
+  skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
+  skycons.play();
+  </script>
+  <canvas id="icon1" width="150" height="150"></canvas>
 </div>
 
 <div id="additionalWeather">
@@ -38,15 +44,5 @@
   </div>
 </div>
 
-<div ng-controller="WeatherCtrl">
 
-  <script>
-  var skycons = new Skycons({"color": "BLACK"});
-  skycons.add("icon1", Skycons.PARTLY_CLOUDY_DAY);
-  skycons.play();
-  </script>
-  <canvas id="icon1" width="200" height="200"></canvas>
-
-  <!--<skycon icon="CurrentWeather.forecast.icon" color="blue" size="100"></skycon>-->
-</div>
 <p style="margin-top:200px"> Hi! </p>

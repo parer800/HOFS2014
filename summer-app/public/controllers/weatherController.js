@@ -5,12 +5,10 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
   $http.get('/api/getWeather')
   .success(function(data) {
     //$scope.CurrentWeather = data;
-    $scope.CurrentWeather = {
-    forecast: {
-        icon: "partly-cloudy-night"
+    $scope.CurrentWeather = data;
+    console.log(data);
 
-    }
-  };
+
 
 
   })
