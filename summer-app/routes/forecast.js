@@ -2,7 +2,7 @@
 * for the weather.
 */
 var Forecast = require('forecast');
-
+var sc = require('soundclouder');
 
 
 var forecast = new Forecast({
@@ -27,5 +27,8 @@ app.get('/api/getWeather', isLoggedIn, function(req, res) {
   });
 
 });
+
+
+
 
 };

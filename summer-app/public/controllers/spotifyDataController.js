@@ -4,7 +4,7 @@ angular.module( 'spotifyDataController', [] ).controller('SpotifyDataCtrl', func
 
   $scope.search = function(data){
 
-  	var searchdata = 'https://ws.spotify.com/search/1/artist.json?q=' + data;
+  	var searchdata = 'http://ws.spotify.com/search/1/album.json?q=' + data;
 
   	 $http.get(searchdata)
   		.success(function(data) {

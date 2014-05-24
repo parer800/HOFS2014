@@ -7,9 +7,6 @@ angular.module( 'weatherController', [] ).controller('WeatherCtrl', function ($s
     //$scope.CurrentWeather = data;
     $scope.CurrentWeather = data;
 
-
-
-
   })
   .error(function(data) {
     console.log('Error: ' + data);
