@@ -9,7 +9,7 @@ module.exports = function(app,passport){
   app.get('/', function(req,res) {
     console.log(req.isAuthenticated());
     if(req.isAuthenticated())
-    res.redirect('/home');
+    res.redirect('/start');
     else
     res.render('login');
 
